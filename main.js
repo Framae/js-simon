@@ -1,5 +1,40 @@
 /*Descrizione: 
-Visualizzare in pagina 5 numeri casuali. Da lì parte un timer di 30 secondi.
+Visualizzare in pagina 5 numeri casuali.*/
+
+let secondi = 30;
+
+function casual1() {
+    num = Math.floor(Math.random() * 100)+1;
+    document.getElementById('numero1').innerHTML = num;
+}
+casual1();
+
+function casual2() {
+    num = Math.floor(Math.random() * 100)+1;
+    document.getElementById('numero2').innerHTML = num;
+}
+casual2();
+
+function casual3() {
+    num = Math.floor(Math.random() * 100)+1;
+    document.getElementById('numero3').innerHTML = num;
+}
+casual3();
+
+function casual4() {
+    num = Math.floor(Math.random() * 100)+1;
+    document.getElementById('numero4').innerHTML = num;
+}
+casual4();
+
+function casual5() {
+    num = Math.floor(Math.random() * 100)+1;
+    document.getElementById('numero5').innerHTML = num;
+}
+casual5();
+
+
+/*Da lì parte un timer di 30 secondi.
 Dopo 30 secondi l’utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
 Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati. 
 Consigli del giorno: 
