@@ -1,22 +1,44 @@
 /*Descrizione: 
 Visualizzare in pagina 5 numeri casuali.*/
 
-let secondi = 30;
 
-let clockID = setInterval(timer30s, 1000);
+// function timer30s() {
+//     document.getElementById('contatore').innerHTML = secondi;
+//     let secondi = 30;
+//     let clockID = setInterval(timer30s, 1000);
 
-function timer30s() {
-    document.getElementById('contatore').innerHTML = secondi;
-}
+// }
+
 
 function casual() {
    let num = Math.floor(Math.random() * 100)+1;
     document.getElementById('numero1').innerHTML += num+" ";
+    
 }
-casual();
 
 for(let i=0; i<5; i++){
     casual();
+};
+
+let secondi = 30;
+let clockID = setInterval(aggiornaContatore, 1000);
+function aggiornaContatore() {
+    document.getElementById('contatore').innerHTML = secondi;
+    if (secondi == 0) {
+        fermaContatore();
+        setTimeout(function() {
+            
+            for(let i=0; i<5; i++){
+                prompt('Inserisci numero');
+            }
+        }, 250);
+    } else {
+        secondi--;
+    }
+
+}
+function fermaContatore() {
+    clearInterval(clockID);
 }
 
 
