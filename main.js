@@ -3,40 +3,28 @@ Visualizzare in pagina 5 numeri casuali.*/
 
 let secondi = 30;
 
-function casual1() {
-   let num = Math.floor(Math.random() * 100)+1;
-    document.getElementById('numero1').innerHTML = num;
-}
-casual1();
+let clockID = setInterval(timer30s, 1000);
 
-function casual2() {
-   let num = Math.floor(Math.random() * 100)+1;
-    document.getElementById('numero2').innerHTML = num;
+function timer30s() {
+    document.getElementById('contatore').innerHTML = secondi;
 }
-casual2();
 
-function casual3() {
+function casual() {
    let num = Math.floor(Math.random() * 100)+1;
-    document.getElementById('numero3').innerHTML = num;
+    document.getElementById('numero1').innerHTML += num+" ";
 }
-casual3();
+casual();
 
-function casual4() {
-   let num = Math.floor(Math.random() * 100)+1;
-    document.getElementById('numero4').innerHTML = num;
+for(let i=0; i<5; i++){
+    casual();
 }
-casual4();
 
-function casual5() {
-   let num = Math.floor(Math.random() * 100)+1;
-    document.getElementById('numero5').innerHTML = num;
-}
-casual5();
 
 
 /*Da lì parte un timer di 30 secondi.
 
 Dopo 30 secondi l’utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
+
 Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati. 
 Consigli del giorno: 
 * Pensate prima in italiano.
